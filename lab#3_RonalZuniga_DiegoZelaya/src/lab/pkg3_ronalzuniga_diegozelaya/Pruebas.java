@@ -33,7 +33,7 @@ public class Pruebas {
     
     
     
-    public void Prueba(){
+    public String Prueba(){
         System.out.print("NOMBRE DE PRUEBA: ");
         String p=scanner.next();
         char con='s';
@@ -96,11 +96,12 @@ public class Pruebas {
         System.out.print("APROBADO O REPOBRADO: ");
         String t=scanner.next();
         Informe(p,e,t,equipo);
+        e = p + " - " + e;
+        return e;
     }
     
     public void Informe(String x, String y, String z, ArrayList<String> equipo){
-        System.out.println("Informe de prueba: "+x);
-        System.out.println("Administrador: "+y);
+        System.out.println("Informe de prueba: "+x+"\nAdministrador: "+y+"\n");
         System.out.println();
         for (int i=0; i<equipo.size();i++){
             System.out.println(equipo.get(i));

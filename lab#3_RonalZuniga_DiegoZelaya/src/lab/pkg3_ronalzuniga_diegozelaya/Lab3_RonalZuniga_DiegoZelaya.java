@@ -1,5 +1,6 @@
 package lab.pkg3_ronalzuniga_diegozelaya;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Lab3_RonalZuniga_DiegoZelaya {
@@ -75,7 +76,13 @@ public class Lab3_RonalZuniga_DiegoZelaya {
                         opcion = sc.nextInt();
                     }
                     switch (opcion) {
-                        case 1:
+                        case 1: Pruebas prueba = new Pruebas();
+                            String e = prueba.Prueba();
+                            ArrayList<String>p=new ArrayList();
+                            p.add(e);
+                            for (int i=0; i<p.size(); i++){
+                                System.out.println((i+1)+". "+p.get(i));
+                            }
                             break;
 
                         case 2:
