@@ -99,6 +99,13 @@ public class Pruebas {
     }
     
     public void Informe(String x, String y, String z, ArrayList<String> equipo){
-        
+        System.out.println("Informe de prueba: "+x);
+        System.out.println("Administrador: "+y);
+        System.out.println();
+        for (int i=0; i<equipo.size();i++){
+            System.out.println(equipo.get(i));
+        }
+        System.out.println();
+        System.out.println("Estado: "+z);
     }
 }
