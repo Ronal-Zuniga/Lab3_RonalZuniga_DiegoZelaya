@@ -83,7 +83,6 @@ public class Lab3_RonalZuniga_DiegoZelaya {
                     }//fin del switch
                 }//fin del while
             }//fin decision
-
         }//fin while
     }//fin del main
 }//fin de la clase
