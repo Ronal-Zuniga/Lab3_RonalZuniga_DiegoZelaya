@@ -34,9 +34,14 @@ public class Pruebas {
     
     
     public void Prueba(){
-        System.out.print("NOMBRE: ");
-        String n=scanner.next();
-        int buscar=0;
+        System.out.print("NOMBRE DE PRUEBA: ");
+        String p=scanner.next();
+        char con='s';
+        ArrayList<String>equipo=new ArrayList();
+        while (con=='s' || con=='S'){
+            System.out.print("EQUIPO: ");
+            String n=scanner.next();
+            int buscar=0;
         if (buscar==0){
             for (int i=0; i<pescador.size(); i++){
                 n.toLowerCase();
@@ -58,17 +63,49 @@ public class Pruebas {
         if (buscar==0){
             for (int i=0; i<pescador.size(); i++){
                 n.toLowerCase();
-                if (pescador.get(i).equals(n)){
-                    n = n + " - Pescador";
+                if (luz.get(i).equals(n)){
+                    n = n + " - portador de luz";
                     buscar=1;
                 }
             }
         }
+        if (buscar==0){
+            for (int i=0; i<pescador.size(); i++){
+                n.toLowerCase();
+                if (explorador.get(i).equals(n)){
+                    n = n + " - explorador";
+                    buscar=1;
+                }
+            }
+        }
+        if (buscar==0){
+            for (int i=0; i<pescador.size(); i++){
+                n.toLowerCase();
+                if (ondas.get(i).equals(n)){
+                    n = n + " - manipulador de ondas";
+                    buscar=1;
+                }
+            }
+        }
+        equipo.add(n);
+        System.out.println("DESEA INGRESAR OTRO AL EQUIPO? (S/N) ");
+        con=scanner.next().charAt(0);
+        }
         System.out.print("EVALUADOR: ");
         String e=scanner.next();
-        System.out.print("EQUIPO: ");
-        String q=scanner.next();
-        System.out.print("ESTADO: ");
+        System.out.print("APROBADO O REPOBRADO: ");
         String t=scanner.next();
+        Informe(p,e,t,equipo);
+    }
+    
+    public void Informe(String x, String y, String z, ArrayList<String> equipo){
+        System.out.println("Informe de prueba: "+x);
+        System.out.println("Administrador: "+y);
+        System.out.println();
+        for (int i=0; i<equipo.size();i++){
+            System.out.println(equipo.get(i));
+        }
+        System.out.println();
+        System.out.println("Estado: "+z);
     }
 }
