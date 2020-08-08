@@ -190,6 +190,7 @@ public class Lab3_RonalZuniga_DiegoZelaya {
                     }
                     switch (opcion) {
                         case 1:
+                            System.out.println("Pruebas:");
                             Pruebas prueba = new Pruebas();
                             String e = prueba.Prueba();
                             ArrayList<String> p = new ArrayList();
@@ -197,10 +198,17 @@ public class Lab3_RonalZuniga_DiegoZelaya {
                             for (int i = 0; i < p.size(); i++) {
                                 System.out.println((i + 1) + ". " + p.get(i));
                             }
+                            System.out.println();
+                            System.out.println("Pisos:");
+                            for (int i=0; i<piso.size(); i++) {
+                                System.out.println(piso.get(i));
+                            }
                             break;
 
-                        case 2:
-
+                        case 2: System.out.print("Personas:");
+                            for (int i=0; i<pers.size(); i++) {
+                                System.out.println(pers.get(i));
+                            }
                             break;
                     }//fin del switch
                 }//fin del while
